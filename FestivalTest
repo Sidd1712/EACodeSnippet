@@ -1,0 +1,16 @@
+describe('homePageCheck', () => {
+    it ('should display the base url page', async() => {
+       browser.url("http://localhost:4200/festivals")
+       //Add a 1 second pause
+       browser.pause(1000)
+       //Checking for the 1st artist with name Adrian
+       await $ ("=Adrian")
+       //Checking that the artist has an associated festival
+       await $ ("=Trainerella")
+       //Checking for last artist with name Yanke East
+       await $("=Yanke")
+       //Checking that the artist has a festival
+       await $("=Small Night In")
+
+    });
+})
